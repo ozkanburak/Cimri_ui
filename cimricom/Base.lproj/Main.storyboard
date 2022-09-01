@@ -1,24 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yqm-X2-5j6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cimricom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Marka, ürün veya kategori ara" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-tx-7hA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6229" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-lX-1qr">
+                                <rect key="frame" x="-1" y="139" width="415" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="415" id="30t-OK-hyq"/>
+                                    <constraint firstAttribute="height" constant="180" id="kl0-hs-cfr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DDL-Kn-pgc">
+                                <rect key="frame" x="0.0" y="365.5" width="414" height="447.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hAS-gG-WbS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kategoriHucre" id="SYS-FV-hpk" customClass="KategoriCollectionViewCell" customModule="cimricom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7hI-Br-0HP">
+                                            <rect key="frame" x="0.0" y="0.0" width="133" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bir" translatesAutoresizingMaskIntoConstraints="NO" id="grX-hV-dDc">
+                                                    <rect key="frame" x="5" y="0.0" width="123" height="99"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="99" id="Gft-lw-49G"/>
+                                                        <constraint firstAttribute="width" constant="123" id="Phe-Yn-BCe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cep Telefon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAa-RH-Q2c">
+                                                    <rect key="frame" x="5" y="78" width="123" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DAa-RH-Q2c" secondAttribute="trailing" constant="5" id="1E0-Lt-Z9n"/>
+                                                <constraint firstItem="grX-hV-dDc" firstAttribute="leading" secondItem="7hI-Br-0HP" secondAttribute="leading" constant="5" id="8np-ZI-f4g"/>
+                                                <constraint firstItem="DAa-RH-Q2c" firstAttribute="leading" secondItem="7hI-Br-0HP" secondAttribute="leading" constant="5" id="CzM-M5-oM1"/>
+                                                <constraint firstItem="grX-hV-dDc" firstAttribute="top" secondItem="7hI-Br-0HP" secondAttribute="top" id="GDa-ev-Zcu"/>
+                                                <constraint firstAttribute="trailing" secondItem="grX-hV-dDc" secondAttribute="trailing" constant="5" id="V4l-tQ-pWZ"/>
+                                                <constraint firstItem="DAa-RH-Q2c" firstAttribute="top" secondItem="7hI-Br-0HP" secondAttribute="top" constant="78" id="aCU-AT-K43"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="kategoriAdiLabel" destination="DAa-RH-Q2c" id="7N4-hN-Fc6"/>
+                                            <outlet property="kategoriImageView" destination="grX-hV-dDc" id="HvY-pT-mT8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategorileri Keşfet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-1s-AYt">
+                                <rect key="frame" x="9" y="338" width="414" height="17.5"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DDL-Kn-pgc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2AA-Mq-5tK"/>
+                            <constraint firstItem="1yZ-lX-1qr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KUW-In-w3o"/>
+                            <constraint firstAttribute="trailing" secondItem="rtM-tx-7hA" secondAttribute="trailing" id="QaO-UA-PRf"/>
+                            <constraint firstItem="DDL-Kn-pgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RzG-w9-37x"/>
+                            <constraint firstAttribute="trailing" secondItem="Bgp-1s-AYt" secondAttribute="trailing" constant="-9" id="VRI-Zn-FiO"/>
+                            <constraint firstItem="rtM-tx-7hA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wg7-Xq-g3q"/>
+                            <constraint firstItem="Bgp-1s-AYt" firstAttribute="top" secondItem="1yZ-lX-1qr" secondAttribute="bottom" constant="19" id="ZUe-jv-oXG"/>
+                            <constraint firstItem="Bgp-1s-AYt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="aBU-Wz-yOH"/>
+                            <constraint firstItem="1yZ-lX-1qr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-1" id="bZm-Q4-0iG"/>
+                            <constraint firstItem="1yZ-lX-1qr" firstAttribute="top" secondItem="rtM-tx-7hA" secondAttribute="bottom" id="cL8-BB-W9M"/>
+                            <constraint firstItem="DDL-Kn-pgc" firstAttribute="top" secondItem="Bgp-1s-AYt" secondAttribute="bottom" constant="10" id="nin-wC-uZj"/>
+                            <constraint firstItem="DDL-Kn-pgc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rLw-ug-9a6"/>
+                            <constraint firstItem="rtM-tx-7hA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uxF-3H-Nc3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="caw-Gc-a7k"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="kategoriCollectionView" destination="DDL-Kn-pgc" id="Tlz-An-soO"/>
+                        <outlet property="searchBar" destination="rtM-tx-7hA" id="7nj-mE-0PP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="-394.41964285714283"/>
+        </scene>
+        <!--Hesabım-->
+        <scene sceneID="kNQ-aM-7fh">
+            <objects>
+                <viewController id="2Sj-bz-PaK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyS-In-nO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mvG-ZW-uvh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hesabım" image="hesabım" id="jyR-NQ-fzK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECd-B3-0gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="333"/>
+        </scene>
+        <!--Kategoriler-->
+        <scene sceneID="wig-YV-xbb">
+            <objects>
+                <viewController id="ElT-Fl-tgY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdU-37-UIa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VzN-RX-QHc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kategoriler" image="arama" id="Iie-pT-ff7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G95-mh-RYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="-394"/>
+        </scene>
+        <!--Markette-->
+        <scene sceneID="LSw-sy-3sv">
+            <objects>
+                <viewController id="Ln7-jf-v2B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZET-5Y-wB7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aSO-In-W0o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Markette" image="marketicon" id="7Ry-h4-iJp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qW8-Mb-jZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="333"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hke-Jh-PYe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yqm-X2-5j6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bBF-QL-X0c">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V0J-kW-Ykd" kind="relationship" relationship="viewControllers" id="eAM-kM-cgV"/>
+                        <segue destination="ElT-Fl-tgY" kind="relationship" relationship="viewControllers" id="rsW-i6-gxT"/>
+                        <segue destination="2Sj-bz-PaK" kind="relationship" relationship="viewControllers" id="uBT-a4-SJN"/>
+                        <segue destination="Ln7-jf-v2B" kind="relationship" relationship="viewControllers" id="Yb1-lS-I2D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DB-E4-ej2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="57.589285714285708"/>
+        </scene>
+        <!--Anasayfa-->
+        <scene sceneID="Omo-vi-byp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V0J-kW-Ykd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Anasayfa" image="home-home_symbol" id="lst-I1-mkf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NOU-6y-pLC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MIB-ui-3Bj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXJ-fj-fUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_6229" width="1019" height="454"/>
+        <image name="arama" width="13" height="9"/>
+        <image name="bir" width="248" height="238"/>
+        <image name="hesabım" width="11" height="11"/>
+        <image name="home-home_symbol" width="11" height="12"/>
+        <image name="marketicon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -13,6 +13,9 @@
 		CCFE665528BFC6690031138E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFE665328BFC6690031138E /* Main.storyboard */; };
 		CCFE665728BFC66E0031138E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFE665628BFC66E0031138E /* Assets.xcassets */; };
 		CCFE665A28BFC66E0031138E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFE665828BFC66E0031138E /* LaunchScreen.storyboard */; };
+		CCFE666228C0076D0031138E /* Kategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE666128C0076D0031138E /* Kategori.swift */; };
+		CCFE666828C1344A0031138E /* KategoriCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE666728C1344A0031138E /* KategoriCollectionViewCell.swift */; };
+		CCFE666F28C157E80031138E /* Almarai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCFE666E28C157E80031138E /* Almarai-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CCFE665628BFC66E0031138E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCFE665928BFC66E0031138E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCFE665B28BFC66E0031138E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCFE666128C0076D0031138E /* Kategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategori.swift; sourceTree = "<group>"; };
+		CCFE666728C1344A0031138E /* KategoriCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCollectionViewCell.swift; sourceTree = "<group>"; };
+		CCFE666E28C157E80031138E /* Almarai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Almarai-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				CCFE664D28BFC6690031138E /* AppDelegate.swift */,
-				CCFE664F28BFC6690031138E /* SceneDelegate.swift */,
 				CCFE665128BFC6690031138E /* ViewController.swift */,
+				CCFE664F28BFC6690031138E /* SceneDelegate.swift */,
+				CCFE666928C154740031138E /* Fonts */,
+				CCFE666728C1344A0031138E /* KategoriCollectionViewCell.swift */,
 				CCFE665328BFC6690031138E /* Main.storyboard */,
+				CCFE666128C0076D0031138E /* Kategori.swift */,
 				CCFE665628BFC66E0031138E /* Assets.xcassets */,
 				CCFE665828BFC66E0031138E /* LaunchScreen.storyboard */,
 				CCFE665B28BFC66E0031138E /* Info.plist */,
 			);
 			path = cimricom;
+			sourceTree = "<group>";
+		};
+		CCFE666928C154740031138E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCFE666E28C157E80031138E /* Almarai-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +145,7 @@
 				CCFE665A28BFC66E0031138E /* LaunchScreen.storyboard in Resources */,
 				CCFE665728BFC66E0031138E /* Assets.xcassets in Resources */,
 				CCFE665528BFC6690031138E /* Main.storyboard in Resources */,
+				CCFE666F28C157E80031138E /* Almarai-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +159,8 @@
 				CCFE665228BFC6690031138E /* ViewController.swift in Sources */,
 				CCFE664E28BFC6690031138E /* AppDelegate.swift in Sources */,
 				CCFE665028BFC6690031138E /* SceneDelegate.swift in Sources */,
+				CCFE666228C0076D0031138E /* Kategori.swift in Sources */,
+				CCFE666828C1344A0031138E /* KategoriCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
